@@ -90,15 +90,12 @@ This will be an application that should store incoming and outgoing financial tr
 }
 ```
 
-<ul><li>
-DELETE / transactions /: id: The route must delete a transaction with the id present in the route parameters.
-</li>
-<p>
-<li>
-POST / transactions / import: The route must allow the import of a file with .csv format containing the same information needed to create a transaction id, title, value, type, category_id, created_at, updated_at, where each line of the CSV file must be a new record for the database, and finally return all transactions that have been imported into your database.
-</li>
 
-</ul>
+- `DELETE / transactions /:` id: The route must delete a transaction with the id present in the route parameters.
+<p>
+
+`POST / transactions / import:` The route must allow the import of a file with .csv format containing the same information needed to create a transaction id, title, value, type, category_id, created_at, updated_at, where each line of the CSV file must be a new record for the database, and finally return all transactions that have been imported into your database.
+<p>
 
 ## Testing specification
 
