@@ -103,36 +103,27 @@ POST / transactions / import: The route must allow the import of a file with .cs
 ## Testing specification
 
 For this challenge we have the following tests:
-<ul>
-<li>
-should be able to create a new transaction: In order for this test to pass, your application must allow a transaction to be created, and return a json with the created transaction.
-</li>
+
+- `should be able to create a new transaction:` In order for this test to pass, your application must allow a transaction to be created, and return a json with the created transaction.
 <p>
 
-<li>
-should create tags when inserting new transactions: For this test to pass, your application must allow that when creating a new transaction with a category that does not exist, it is created and inserted in the category_id field of the transaction with the id that was just created.
-</li>
-
-<li>
-should not create tags when they already exists: In order for this test to pass, your application must allow when creating a new transaction with a category that already exists, to be assigned to the category_id field of the transaction with the id of that existing category, not allowing the creation of categories with the same title.
-</li>
+- `should create tags when inserting new transactions:` For this test to pass, your application must allow that when creating a new transaction with a category that does not exist, it is created and inserted in the category_id field of the transaction with the id that was just created.
 <p>
 
-<li>
-should be able to list the transactions: In order for this test to pass, your application must allow an array of objects containing all transactions to be returned together with the balance of income, outcome and total transactions that have been created so far.
-</li>
+- `should not create tags when they already exists:` In order for this test to pass, your application must allow when creating a new transaction with a category that already exists, to be assigned to the category_id field of the transaction with the id of that existing category, not allowing the creation of categories with the same title.
 <p>
 
-<li>
-should not be able to create outcome transaction without a valid balance: In order for this test to pass, your application should not allow an outcome type transaction to exceed the total amount the user has in cash (total income), returning a response with HTTP 400 code and an error message in the following format: {error: string}.
-</li>
-<p>
-
-<li>
-should be able to delete a transaction: In order for this test to pass, you must allow your delete route to delete a transaction, and when deleting, it returns an empty response, with status 204.
-</li>
+- `should be able to list the transactions:` In order for this test to pass, your application must allow an array of objects containing all transactions to be returned together with the balance of income, outcome and total transactions that have been created so far.
 <p>
 
 
-- `should be able to import transactions`: For this test to pass, your application must allow a csv file to be imported. With the imported file, you must allow all records and categories that were present in that file to be created in the database, and return all transactions that were imported.
+- `should not be able to create outcome transaction without a valid balance:` In order for this test to pass, your application should not allow an outcome type transaction to exceed the total amount the user has in cash (total income), returning a response with HTTP 400 code and an error message in the following format: {error: string}.
+<p>
+
+
+- `should be able to delete a transaction:` In order for this test to pass, you must allow your delete route to delete a transaction, and when deleting, it returns an empty response, with status 204.
+<p>
+
+
+- `should be able to import transactions:` For this test to pass, your application must allow a csv file to be imported. With the imported file, you must allow all records and categories that were present in that file to be created in the database, and return all transactions that were imported.
 
