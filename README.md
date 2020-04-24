@@ -134,5 +134,5 @@ should be able to delete a transaction: In order for this test to pass, you must
 <p>
 
 
--`should be able to import transactions`: For this test to pass, your application must allow a csv file to be imported. With the imported file, you must allow all records and categories that were present in that file to be created in the database, and return all transactions that were imported.
+`-<b>should be able to import transactions</b>`: For this test to pass, your application must allow a csv file to be imported. With the imported file, you must allow all records and categories that were present in that file to be created in the database, and return all transactions that were imported.
 
