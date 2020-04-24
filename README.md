@@ -6,8 +6,8 @@ This will be an application that should store incoming and outgoing financial tr
 
 
 ## Application routes
-<ul><li>
-POST / transactions: The route must receive title, value, type, and category within the body of the request, with type being the type of the transaction, which should be income for incoming (depositing) and outcome for outgoing (withdrawing). When registering a new transaction, it must be stored within your database, having the fields <b>id, title, value, type, category_id, created_at, updated_at.</b></li></ul>
+
+- `POST / transactions:` The route must receive title, value, type, and category within the body of the request, with type being the type of the transaction, which should be income for incoming (depositing) and outcome for outgoing (withdrawing). When registering a new transaction, it must be stored within your database, having the fields ` id`, `title`, `value`, `type`, `category_id`, `created_at`, `updated_at`.
 
 ```
 {
@@ -18,9 +18,9 @@ POST / transactions: The route must receive title, value, type, and category wit
    "category": "Food"
 }
 ```
-<ul><li>
-GET / transactions: This route should return a listing with all the transactions you have registered so far, together with the sum of the entries, withdrawals and total credit. This route must return an object in the following format:
-</li></ul>
+
+- `GET / transactions:` This route should return a listing with all the transactions you have registered so far, together with the sum of the entries, withdrawals and total credit. This route must return an object in the following format:
+
 
 ```
 {
